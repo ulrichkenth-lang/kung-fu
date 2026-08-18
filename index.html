@@ -240,8 +240,10 @@
             // Countdown 31h
             let timeInSeconds = 31 * 60 * 60;
             const countdownEl = document.getElementById('countdown');
+
             setInterval(() => {
                 if(timeInSeconds > 0) timeInSeconds--;
+                
                 const h = String(Math.floor(timeInSeconds / 3600)).padStart(2, '0');
                 const m = String(Math.floor((timeInSeconds % 3600) / 60)).padStart(2, '0');
                 const s = String(timeInSeconds % 60).padStart(2, '0');
